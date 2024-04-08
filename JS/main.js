@@ -23,5 +23,25 @@ function drawpath() {
     }
 }
 
+const canvas = document.getElementById("my-house");
+const ctx = canvas.getContext("2d");
+// Establecer ando de linea
+ctx.lineWidth = 10;
+
+// Muro
+ctx.strokeRect(75, 140, 150, 110);
+
+// Puerta
+ctx.fillRect(130, 190, 40, 60);
+
+// Techo
+ctx.beginPath();
+ctx.moveTo(50, 140);
+ctx.lineTo(150, 60);
+ctx.lineTo(250, 140);
+ctx.closePath();
+ctx.stroke();
+
+
 drawcuadrado();
 drawpath();
